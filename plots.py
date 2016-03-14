@@ -17,7 +17,8 @@ def build_plot(data, ticker):
 
   # Create an HTML snippet of our plot.
   snippet = components(p)
-  print "js snippet set"
+
+  # print "js snippet set"
   print snippet[0]
   print snippet[1]
   # Return the snippet we want to place in our page.

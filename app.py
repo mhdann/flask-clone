@@ -36,11 +36,7 @@ def signup():
 
   codes = [s['code'] for s in search]
   error = "<div> Code not in the list. Try: <ul><li>" + "</li><li>".join(codes) + "</li></ul> </div>"
-  print error 
-  #message = Markup(error)
-  #print "Marked up"
-  #flash("test")
-  #print "Flashed"
+  print error  
   return render_template("index.html", error=error)
 
 if __name__ == '__main__':
