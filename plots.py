@@ -11,15 +11,19 @@ def build_plot(data, ticker):
   print "Data: "
   print data
 
-  # construct the plot
-  p = Line(data.High, title=ticker, xlabel='Date', ylabel='Price', width=800, height=800)
+  if 'High' in data.columns:
+    # construct the plot
+    p = Line(data.High, title=ticker, xlabel='Date', ylabel='Price', width=800, height=800)
+  elif 'VALUE' in data.columns:
+    p = Line(data.VALUE, title=ticker, xlabel='Date', ylabel='Price', width=800, height=800)  
+
   print "Plot made"
 
   # Create an HTML snippet of our plot.
   snippet = components(p)
 
-  # print "js snippet set"
-  print snippet[0]
-  print snippet[1]
+  print "js snippet set"
+  # print snippet[0]
+  # print snippet[1]
   # Return the snippet we want to place in our page.
   return snippet
