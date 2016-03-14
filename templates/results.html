@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Result Plot</title>
+		<!-- From http://blog.thedataincubator.com/2015/09/painlessly-deploying-data-apps-with-bokeh-flask-and-heroku/-->
+		<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css" type="text/css" />
+    		<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
+		{{ bokeh_script | safe }}
+		<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script-->
+	</head>
+	<body>
+                <div>
+                        <h1>A Simple Stock Lookup<h1> 
+                </div>
+
+	<div class=page>
+	      {{ bokeh_div | safe }}    	      
+	</div>
+	
+	<p>Enter a stock to examine: </p>
+
+	<form action="/lookup" method="post">
+	  <input type="text" name="ticker"></input>
+	  <input type="submit" value="Lookup Stock"></input>
+	</form>
+
+	</body>
+</html>

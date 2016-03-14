@@ -2,14 +2,26 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Hello, World!</title>
+		<title>Ticker: Hello World!</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div>
-  			<h1>Hello, World!</h1>
+  			<h1>A Simple Stock Lookup<h1> 
 		</div>
+	<p>Enter a stock to examine: </p>
+
+	<form action="/lookup" method="post">
+	  <input type="text" name="ticker"></input>
+	  <input type="submit" value="Lookup Stock"></input>
+	</form>
+
+
+	{{ error | safe }}
+	 
+	
+
 	</body>
 </html>
