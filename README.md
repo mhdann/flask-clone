@@ -1,3 +1,9 @@
+# Sample Flask Deployment
+---
+I've gone through this readme and carried out the steps to better understand Flask. In the process I built a simple app to display Quandl API queries for financial data in a Bokeh plot.
+
+Original file below
+---
 # Flask on Heroku
 
 This project is intended to help you tie together some important concepts and
